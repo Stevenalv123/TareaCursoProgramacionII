@@ -20,11 +20,11 @@ namespace ProyectoFinalProgramacionII
         {
             if (!string.IsNullOrEmpty(TxtEmail.Text))
             {
-                TextEmail.Visibility = Visibility.Collapsed; // Ocultar el placeholder
+                TextEmail.Visibility = Visibility.Collapsed;
             }
             else
             {
-                TextEmail.Visibility = Visibility.Visible; // Mostrar el placeholder si está vacío
+                TextEmail.Visibility = Visibility.Visible;
             }
         }
 
@@ -37,11 +37,11 @@ namespace ProyectoFinalProgramacionII
         {
             if (!string.IsNullOrEmpty(TxtPassword.Password))
             {
-                TextPassword.Visibility = Visibility.Collapsed; // Ocultar el placeholder
+                TextPassword.Visibility = Visibility.Collapsed;
             }
             else
             {
-                TextPassword.Visibility = Visibility.Visible; // Mostrar el placeholder si está vacío
+                TextPassword.Visibility = Visibility.Visible;
             }
         }
 
