@@ -1,18 +1,18 @@
-﻿<Window x:Class="ProyectoFinalProgramacionII.MainWindow"
+﻿<Page x:Class="ProyectoFinalProgramacionII.LoginPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinalProgramacionII"
-        mc:Ignorable="d" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" WindowStyle="None"
         Title="Login" Height="500" Width="800">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Source="Assets/close.png" Grid.Column="1" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}"/>
+        <Image Source="/Assets/close.png" Grid.Column="1" Panel.ZIndex="1" MouseUp="Image_MouseUp" Style="{StaticResource imgClose}"/>
 
         <Border CornerRadius="10 0 0 10">
             <Border.Background>
@@ -24,7 +24,7 @@
         </Border>
 
         <Grid>
-            <Image Source="Assets\loginImage.jpg" Stretch="UniformToFill"/>
+            <Image Source="/Assets/loginImage.jpg" Stretch="UniformToFill"/>
             <Rectangle Fill="Black" Opacity="0.8"/>
 
             <StackPanel VerticalAlignment="Center">
@@ -33,13 +33,13 @@
                            Style="{StaticResource normalText}"
                            Opacity="0.8"
                            Margin="20, 30"/>
-                <Button Content="Quiero registrarme" Style="{StaticResource button}"/>
+                <Button Content="Quiero registrarme" Style="{StaticResource button}" x:Name="BtnGoSignInPage" Click="BtnGoSignInPage_Click"/>
             </StackPanel>
         </Grid>
 
-        <Border Background="#ffff" Grid.Column="1" CornerRadius="0 10 10 0" MouseDown="Border_MouseDown">
+        <Border Background="#ffff" Grid.Column="1" CornerRadius="0 10 10 0">
             <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="Incia sesión en Melodify" Style="{StaticResource titleText}" Foreground="#3Ab19B"/>
+                <TextBlock Text="Inicia sesión en VirtualBook" Style="{StaticResource titleText}" Foreground="#3Ab19B"/>
                 <StackPanel Orientation="Horizontal" Margin="0 20" HorizontalAlignment="Center">
                     <Button Style="{StaticResource buttonCircle}">
                         <Image Source="/Assets/google.png" Width="20" Height="20"/>
@@ -82,8 +82,8 @@
                     </Grid>
                 </Border>
 
-                <Button Content="Continuar" x:Name="TxtSignIn" Click="TxtSignIn_Click" Style="{StaticResource mainbutton}"/>
+                <Button Content="Continuar" x:Name="BtnLogin" Click="BtnLogin_Click" Style="{StaticResource mainbutton}"/>
             </StackPanel>
         </Border>
     </Grid>
-</Window>
+</Page>
